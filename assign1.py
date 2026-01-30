@@ -1,19 +1,21 @@
-list = [14,19,2,1,18]
-#let suppose i have to insert 25 at index of 2(first question)
-list.insert(2, 25)
-print(list)#2nd question
-# 3rd question is to remove first element from the list
-list.pop(0)
-print(list)
-# 4rth question is to insert element at last of the list
-list.append(45)
-print(list)
-# 5th question is to sort the list
-list.sort()
-print(list)
-# 6th question is pop the last element from the list
-list.pop()
-print(list)
-# 7th question is to reverse the list
-list.reverse()
-print(list)
+list = []
+
+a = int(input("Enter a number: "))
+for i in range(a):
+    method = input().split()
+    if method[0] == "insert":
+        list.insert((method[1]), (method[2]))
+    elif method[0] == "print":
+        print(list)
+    elif method[0] == "remove":
+        list.remove((method[1]))
+    elif method[0] == "append":
+        list.append((method[1]))
+    elif method[0] == "sort":
+        list.sort()
+    elif method[0] == "pop":
+        list.pop()
+    elif method[0] == "reverse":
+        list.reverse()
+    else:
+        pass       
